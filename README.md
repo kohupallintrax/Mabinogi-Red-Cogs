@@ -1,2 +1,2 @@
 # Mabinogi-Red-Cogs
-Cogs fo ruse with the REd discord bot. Commands specific for use with mabinogi. 
+Cogs for use with the RED discord bot. Commands specific for use with mabinogi. 
