@@ -25,13 +25,13 @@ class Housing:
             itemPriceList = []
             housingList = []
             msg = ""
-            #Iterate through the XML file for each item hit and append it to the housing list. Price needs          to be an integer
+            #Iterate through the XML file for each item hit and append it to the housing list. Price needs  to be an integer
             for child in root.findall('ItemDesc'):
                 charName = child.get('Char_Name')
                 itemName = child.get('Item_Name')
                 itemPrice = int(child.get('Item_Price'))
                 housingList.append([charName, itemName, itemPrice])
-            #Construct the message our bot will say. Its ugly because I suck at programming. Would have done it the Python way but I wanted  commas in the price and didn't want to think ;)    
+            #Construct the message our bot will say.  
             for charName, itemName, itemPrice in housingList:
                 msg += "[Seller]: "+ charName + " [Item]: " + itemName + " [Price]: " + '{0:,}'.format(itemPrice) +  "\n\n"
             await self.bot.say(msg)
